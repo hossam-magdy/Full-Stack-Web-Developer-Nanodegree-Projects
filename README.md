@@ -4,7 +4,16 @@ Co-reated by Google, Amazon, GitHub and AT&T.
 [Webcast (about the nanodegree)](https://github.com/udacity/ipnd-webcasts/tree/master/Intro-To-Other-Nanodegrees/Full-Stack-Web-Developer)
 
 
-### Courses:
+## Projects:
+1. **Movie Trailer** [[Python2](https://hossam-magdy.github.io/fsnd-projects/1.MovieTrailerA)], [[Python3](https://hossam-magdy.github.io/fsnd-projects/1.MovieTrailerB)]: Server-side code written in Python to store a list of my favorite movies, including box art imagery and a movie trailer URL. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.
+2. [**Build Portfolio Site**](https://hossam-magdy.github.io/fsnd-projects/2.BuildPortfolioSite) [Bootstrap]: Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.
+3. [**Log Analysis**](https://hossam-magdy.github.io/fsnd-projects/3.LogAnalysis) [SQL]: A  large database with over a million rows is explored by building complex SQL queries to draw business conclusions for the data. The project mimics building an internal reporting tool for a newpaper site to discover what kind of articles the site's readers like. The database contains newspaper articles, as well as the web server log for the site.
+4. [**Item Catalog**](https://hossam-magdy.github.io/fsnd-projects/4.ItemCatalog) [Python, Flask, SQLAlchemy, Jinja2]: A RESTful web application utilizing the Flask framework which accesses a SQL database that populates categories and their items. OAuth2 provides authentication for further CRUD functionality on the application. OAuth2 is implemented for Google & facebook providers.
+5. [**Neighborhood Map**](https://hossam-magdy.github.io/fsnd-projects/5.NeighborhoodMap) [KnockoutJS, Responsive, Google Maps API]: An interactive website put together from various APIs. This includes making function calls to Google Maps and other location-based services like Foursquare
+6. [**Linux Server Configuration**](https://hossam-magdy.github.io/fsnd-projects/6.LinuxServerConfiguration) [Shell]: Installing & configuring all required software to turn a baseline Ubuntu AWS (Amazon Web Services) server into a fully functional web application server, including Apache Web Server and PostgreSQL database server.
+
+
+## Courses:
 - [Programming Foundations with Python - Kunal Chawla](https://www.udacity.com/course/programming-foundations-with-python--ud036)
 - [Responsive Web Design Fundamentals - Cameron Pittman](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)
 - [Intro to HTML and CSS - Cameron Pittman](https://www.udacity.com/course/intro-to-html-and-css--ud304)
@@ -26,13 +35,4 @@ Co-reated by Google, Amazon, GitHub and AT&T.
 - [JavaScript Design Patterns - Ben Jaffe](https://www.udacity.com/course/javascript-design-patterns--ud989)
 - [Google Maps APIs - Emily Keller, Ajay Hemnani & Michael Wales](https://www.udacity.com/course/google-maps-apis--ud864)
 - [Configuring Linux Web Servers - Michael Wales](https://www.udacity.com/course/configuring-linux-web-servers--ud299)
-
-
-### Projects:
-1. **Movie Trailer** [[Python2](https://hossam-magdy.github.io/fsnd-projects/2.MovieTrailerA)], [[Python3](https://hossam-magdy.github.io/fsnd-projects/2.MovieTrailerB)]: Server-side code written in Python to store a list of my favorite movies, including box art imagery and a movie trailer URL. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.
-2. [**Build Portfolio Site**](https://hossam-magdy.github.io/fsnd-projects/2.BuildPortfolioSite) [Bootstrap]: Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.
-3. [**Log Analysis**](https://hossam-magdy.github.io/fsnd-projects/3.LogAnalysis) [SQL]: A  large database with over a million rows is explored by building complex SQL queries to draw business conclusions for the data. The project mimics building an internal reporting tool for a newpaper site to discover what kind of articles the site's readers like. The database contains newspaper articles, as well as the web server log for the site.
-4. [**Item Catalog**](https://hossam-magdy.github.io/fsnd-projects/4.ItemCatalog) [Python, Flask, SQLAlchemy, Jinja2]: A RESTful web application utilizing the Flask framework which accesses a SQL database that populates categories and their items. OAuth2 provides authentication for further CRUD functionality on the application. OAuth2 is implemented for Google & facebook providers.
-5. [**Neighborhood Map**](https://hossam-magdy.github.io/fsnd-projects/5.NeighborhoodMap) [KnockoutJS, Responsive, Google Maps API]: An interactive website put together from various APIs. This includes making function calls to Google Maps and other location-based services like Foursquare
-6. [**Linux Server Configuration**](https://hossam-magdy.github.io/fsnd-projects/6.LinuxServerConfiguration) [Shell]: Installing & configuring all required software to turn a baseline Ubuntu AWS (Amazon Web Services) server into a fully functional web application server, including Apache Web Server and PostgreSQL database server.
 
