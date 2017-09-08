@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row divider green"><div class="col-md-12"></div></div>
+<form action="#" method="post">
+    <h1>{% if editCat %}Edit category: {{editCat.name}}{% else %}New Category{% endif %}</h1>
+    <div class="form-group row">
+        <label for="catName-input" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" name="name" placeholder="Category name" id="catName-input"{% if editCat %}value="{{editCat.name}}"{% endif %} required>
+            <!--
+            {% if editCat %}
+                <input class="form-control" type="text" name="name" placeholder="Category name" id="catName-input" value="{{editCat.name}}" required>
+            {% else %}
+                <input class="form-control" type="text" name="name" placeholder="Category name" id="catName-input" required>
+            {% endif %}
+            -->
+        </div>
+    </div>
+	<button type="submit" class="btn btn-primary" id="submit" type="submit">Submit</button>
+</form>
+{% endblock %}

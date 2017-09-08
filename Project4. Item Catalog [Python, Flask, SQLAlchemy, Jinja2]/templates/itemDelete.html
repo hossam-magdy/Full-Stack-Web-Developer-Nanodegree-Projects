@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row divider green"><div class="col-md-12"></div></div>
+<form action="#" method="post">
+    <h1>Are you sure you want to delete item: {{itemToDelete.name}} ?</h1>
+	<button type="submit" class="btn btn-danger" id="submit" type="submit">Delete</button>
+	<a href="{{url_for('showItem', cat_name=itemToDelete.cat.name, item_name=itemToDelete.name)}}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

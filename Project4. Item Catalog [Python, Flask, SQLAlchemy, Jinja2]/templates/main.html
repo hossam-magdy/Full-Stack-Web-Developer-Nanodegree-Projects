@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="links-list-caption">Categories
+            {% if loggedIn(session) %}
+                <a href="{{url_for('newCat')}}" title="add new category" class="new"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            {% endif %}
+            </div>
+            <div class="links-list">
+                {% for cat in Categories %}
+                    <a href="{{url_for('showCat', cat_name=cat.name)}}">{{cat.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="links-list-caption">Latest Items</div>
+            <div class="links-list">
+                {% for item in LatestItems %}
+                    <a href="{{url_for('showItem', cat_name=item.cat.name, item_name=item.name)}}">{{item.name}} <small>({{item.cat.name}})</small></a>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}

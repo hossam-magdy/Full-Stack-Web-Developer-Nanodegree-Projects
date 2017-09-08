@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<ul id="cat-list" style="float: left; min-width: 250px;">
+</ul>
+<div id="cat-display" style="display: inline-block;">
+    <div class="name"></div>
+    <img src="" style="max-width: 200px; max-height: 200px;">
+    <div class="count"></div>
+</div>
+<script>
+$(function() {
+    cats = {
+        'Kitty Sam': [0, 'https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426'],
+        'Kitty Mike': [0, 'https://lh3.ggpht.com/kixazxoJ2ufl3ACj2I85Xsy-Rfog97BM75ZiLaX02KgeYramAEqlEHqPC3rKqdQj4C1VFnXXryadFs1J9A=s0#w=640&h=496']
+    };
+    $.each(cats, function(catName, cat){
+        //alert(key); alert(cat[0]); alert(cat[1]);
+        var elem = $('<li></li>');
+        elem.text(catName);
+        elem.on('click', function(){
+            $('#cat-display .name').text(catName);
+            $('#cat-display .count').text(cats[catName][0]);
+            $('#cat-display img').attr('src', '');
+            $('#cat-display img').attr('src', cats[catName][1]);
+            $('#cat-display img').off('click').on('click', function(){
+                //var cName = $(this).siblings('.name').text();
+                //alert(catName);
+                cats[catName][0]++;
+                $('#cat-display .count').text(cats[catName][0]);
+            });
+        });
+        $('#cat-list').append(elem);
+    });
+});
+</script>
+</body>
+</html>

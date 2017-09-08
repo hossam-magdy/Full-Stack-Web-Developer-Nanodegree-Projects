@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!-- Instructor solution: https://github.com/udacity/ud989-cat-clicker-premium-vanilla -->
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul id="catList"></ul>
+<div id="catView">
+    <div class="catName"></div>
+    <div class="catCount"></div>
+    <img class="catImg">
+</div>
+<div id="admin">
+    <button id="adminBtn">Admin</button>
+    <form>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Click Count</td>
+                <td><input type="number" name="clickCount"></td>
+            </tr>
+            <tr>
+                <td>Image URL</td>
+                <td><input type="text" name="imgSrc"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Cancel">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

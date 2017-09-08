@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+* {
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+}
+
+
+h1, h2, h3 {
+	text-transform: uppercase;
+}
+
+header {
+	border-bottom: medium solid #7d97ad;
+	margin-bottom: 1em;
+	padding-top: 1em;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 4em;
+}
+
+a, a:hover {
+	color: #000;
+}

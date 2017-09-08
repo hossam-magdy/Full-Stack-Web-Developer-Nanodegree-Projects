@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FSND Project: Movie Trailers</title>
+    <!-- Bootstrap 4 alpha stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <style>
+    #trailer-video-container {
+        text-align: center;
+    }
+    #trailer-video-container iframe {
+        top: 0; bottom: 0; left: 0; right: 0;
+        width: 760px;
+        height: 427px;
+    }
+    .movie-tile {
+        display: none;
+        margin: 10px auto 10px auto;
+        width: 220px;
+        height: 342px;
+    }
+    .movie-tile .movie-poster {
+        position: absolute;
+    }
+    /*
+        Used fade/alpha/opacity approach to show movie details instead of
+        3D-180 degree rotation: to enable cross-browser design
+    */
+    .movie-tile .movie-content {
+        padding: 2px;
+        padding-top: 8%;
+        opacity: 0;
+        background-color: #fff;
+        -webkit-transition: opacity 0.4s ease-in-out;
+        -moz-transition: opacity 0.4s ease-in-out;
+        -ms-transition: opacity 0.4s ease-in-out;
+        -o-transition: opacity 0.4s ease-in-out;
+    }
+    .movie-tile.hovered .movie-content {
+        opacity: 0.85;
+    }
+    .movie-tile .movie-poster img, .movie-tile .movie-content {
+        border-radius: 15px;
+        border: solid 1px rgba(0,0,0,0.5);
+    }
+    .movie-tile .movie-poster img, .movie-tile .movie-poster, .movie-tile .movie-content {
+        width: inherit;
+        height: inherit;
+    }
+    .hanging-close {
+        display: block;
+        color: #b00;
+        font-weight: 900;        
+        text-align: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        z-index: 9001;
+    }
+    .hanging-close:hover {
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <!-- Main Page Content -->
+    <div class="container">
+        <nav class="navbar navbar-inverse bg-inverse">
+          <a class="navbar-brand" href="#">FSND Project: Movie Trailers</a>
+        </nav>
+        <div class="row">
+            <!-- Movies Tiles -->
+<div class="col-md-6 col-lg-4">
+    <div class="movie-tile">
+        <div class="movie-poster"><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SY1000_CR0,0,674,1000_AL_.jpg"></div>
+        <div class="movie-content text-center">
+            <h4 class="movie-title">WALL-E (2008)</h4>
+            <button type="button" class="btn btn-secondary movie-show-trailer" data-trailer-youtube-id="alIq_wG9FNk" data-toggle="modal" data-target="#trailer">Show Trailer</button>
+            <p class="movie-storyline">In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-4">
+    <div class="movie-tile">
+        <div class="movie-poster"><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SY1000_CR0,0,674,1000_AL_.jpg"></div>
+        <div class="movie-content text-center">
+            <h4 class="movie-title">Inside Out (2015)</h4>
+            <button type="button" class="btn btn-secondary movie-show-trailer" data-trailer-youtube-id="WIDYqBMFzfg" data-toggle="modal" data-target="#trailer">Show Trailer</button>
+            <p class="movie-storyline">After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-4">
+    <div class="movie-tile">
+        <div class="movie-poster"><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTkKPZ7EIOafEsemyn6zTIDeGYthKC_Okgxi1eX6diuOT3xKWXQ"></div>
+        <div class="movie-content text-center">
+            <h4 class="movie-title">The Martian (2015)</h4>
+            <button type="button" class="btn btn-secondary movie-show-trailer" data-trailer-youtube-id="ej3ioOneTy8" data-toggle="modal" data-target="#trailer">Show Trailer</button>
+            <p class="movie-storyline">An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-4">
+    <div class="movie-tile">
+        <div class="movie-poster"><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4ODk5MTMyNV5BMl5BanBnXkFtZTcwMDMyNTg0Ng@@._V1_SY1000_CR0,0,648,1000_AL_.jpg"></div>
+        <div class="movie-content text-center">
+            <h4 class="movie-title">Warrior (2011)</h4>
+            <button type="button" class="btn btn-secondary movie-show-trailer" data-trailer-youtube-id="kY7HcUACs58" data-toggle="modal" data-target="#trailer">Show Trailer</button>
+            <p class="movie-storyline">The youngest son of an alcoholic former boxer returns home, where he's trained by his father for competition in a mixed martial arts tournament - a path that puts the fighter on a collision course with his estranged, older brother.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-4">
+    <div class="movie-tile">
+        <div class="movie-poster"><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NjMzOTE3Ml5BMl5BanBnXkFtZTcwMDE0OTc5Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg"></div>
+        <div class="movie-content text-center">
+            <h4 class="movie-title">127 Hours (2010)</h4>
+            <button type="button" class="btn btn-secondary movie-show-trailer" data-trailer-youtube-id="OlhLOWTnVoQ" data-toggle="modal" data-target="#trailer">Show Trailer</button>
+            <p class="movie-storyline">An adventurous mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-4">
+    <div class="movie-tile">
+        <div class="movie-poster"><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_SY1000_CR0,0,674,1000_AL_.jpg"></div>
+        <div class="movie-content text-center">
+            <h4 class="movie-title">Fury (2014)</h4>
+            <button type="button" class="btn btn-secondary movie-show-trailer" data-trailer-youtube-id="ej3ioOneTy8" data-toggle="modal" data-target="#trailer">Show Trailer</button>
+            <p class="movie-storyline">A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945.</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    
+    <!-- Trailer Video Modal -->
+    <div class="modal fade" id="trailer" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+                <div class="modal-body" id="trailer-video-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the JavaScript files: jQuery, Tether, Bootstrap4 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+    <!-- Inline Javascript code for page initialization (assign event handlers, & show movies one by one) -->
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $('#trailer').on('hidden.bs.modal', function (e) {
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $('#trailer').on('show.bs.modal', function (e) {
+            var trailerYouTubeId = $(e.relatedTarget).attr('data-trailer-youtube-id');
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+                'id': 'trailer-video',
+                'type': 'text-html',
+                'src': sourceUrl,
+                'frameborder': 0
+            }));
+        });
+        // Show/hide the movie details at mouse hover on poster
+        $('.movie-tile').hover(function(){
+            $(this).toggleClass('hovered');
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+            $('.movie-tile').first().show('fast', function showNext() {
+                $(this).parent().next("div").find('.movie-tile').show("fast", showNext);
+            });
+        });
+    </script>
+</body>
+</html>

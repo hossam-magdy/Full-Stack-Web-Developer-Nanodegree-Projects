@@ -1,0 +1,22 @@
+
+ul#catList {
+    float: left;
+    padding: 0.5em 2em;
+}
+
+div#catView {
+    display: inline-block;
+}
+
+.catName {
+    font-weight: bold;
+}
+
+.catCount {
+    text-decoration: underline;
+}
+
+.catImg {
+    max-width: 500px;
+    max-height: 500px;
+}

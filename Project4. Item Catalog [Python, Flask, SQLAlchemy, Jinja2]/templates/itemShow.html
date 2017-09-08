@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="links-list-caption">Item: {{item.name}} (Category: <a href="{{url_for('showCat', cat_name=cat.name)}}">{{cat.name}}</a>)
+            {% if loggedIn(session) == item.user_id %}
+                <a href="{{url_for('deleteItem', cat_name=cat.name, item_name=item.name)}}" title="delete item: {{item.name}}" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                <a href="{{url_for('editItem', cat_name=item.cat.name, item_name=item.name)}}" title="edit item: {{item.name}}" class="new"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+            {% endif %}
+            </div>
+            <p>{% autoescape false %}{{item.description.replace("\n", "<br>\n")}}{% endautoescape %}</p>
+        </div>
+    </div>
+{% endblock %}

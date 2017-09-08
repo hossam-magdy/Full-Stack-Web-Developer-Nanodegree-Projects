@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row divider green"><div class="col-md-12"></div></div>
+<form action="#" method="post">
+    <h1>{% if editItem %}Edit item: {{editItem.name}}{% else %}New Item{% endif %}</h1>
+    <div class="form-group row">
+        <label for="itemName-input" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" name="name" placeholder="Item name" id="itemName-input"{% if editItem %}value="{{editItem.name}}"{% endif %} required>
+        </div>
+        <label for="itemDescription-input" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="description" placeholder="Item description" id="itemDescription-input" rows="6" required>{% if editItem %}{{editItem.description}}{% endif %}</textarea>            <!--
+        </div>
+            {% if editItem %}
+                <input class="form-control" type="text" name="name" placeholder="Category name" id="catName-input" value="{{editItem.name}}" required>
+            {% else %}
+                <input class="form-control" type="text" name="name" placeholder="Category name" id="catName-input" required>
+            {% endif %}
+            -->
+        </div>
+    </div>
+	<button type="submit" class="btn btn-primary" id="submit" type="submit">Submit</button>
+</form>
+{% endblock %}

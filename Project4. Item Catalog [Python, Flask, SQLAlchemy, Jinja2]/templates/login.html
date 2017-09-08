@@ -1,0 +1,106 @@
+{% extends "template.html" %}
+{% block content %}
+
+<script>
+function sendToken(access_token, provider){
+    //$('#signin-buttons').attr('style', 'display: none');
+    //alert("signInCallback_" + provider + " : " + access_token);
+    $.ajax({
+        type: 'POST',
+        url: '/connect',
+        //processData: false,
+        //contentType: 'application/octet-stream; charset=utf-8',
+        data: {"state": "{{STATE}}", "access_token": access_token, "provider": provider},
+        success: function(result) {
+            // Handle or verify the server response if necessary.
+            if (result) {
+                $('#signin-result').html('Login Successful .. '+ result + ' .. Redirecting …')
+                setTimeout(function() {
+                    window.location.href = "{{request.args.get('next', '/')}}";
+                }, 2000);
+            } else {
+                $('#signin-result').html('Failed to make a server-side call. Check your configuration and console.');
+            }
+        }
+    });
+}
+</script>
+
+<!-- GOOGLE SIGN IN-->
+<meta name="google-signin-client_id" content="598079362490-kiqcll79vi6ir10eg45qcgv755i0jf6k.apps.googleusercontent.com">
+<script src="//apis.google.com/js/platform.js" async defer></script>
+<script>
+function signInCallback_google(authResult) {
+    access_token = authResult.getAuthResponse(true)['access_token'];
+    //console.log(authResult);
+    //alert("signInCallback_google : " + access_token);
+    if (access_token) {
+        sendToken(access_token, "google")
+    }
+}
+</script>
+<!-- END GOOGLE SIGN IN -->
+<!-- FACEBOOK SIGN IN-->
+<meta property="fb:app_id" content="277701509362082"/>
+<script src="//connect.facebook.net/en_US/sdk.js" async defer></script>
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '277701509362082',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+};
+function signInCallback_facebook() {
+    access_token = FB.getAuthResponse()['accessToken'];
+    $.ajax({
+        type: 'GET',
+        url: 'https://graph.facebook.com/v2.9/me/permissions',
+        //processData: false,
+        //contentType: 'application/octet-stream; charset=utf-8',
+        data: {"access_token": access_token},
+        success: function(result) {
+            // Handle or verify the server response if necessary.
+            if (result) {
+                console.log(result);
+            } else {
+                $('#signin-result').html('Failed to make a server-side call. Check your configuration and console.');
+            }
+        }
+    });
+    //alert("signInCallback_facebook : " + access_token);
+    sendToken(access_token, "facebook")
+}
+</script>
+<!-- END FACEBOOK SIGN IN-->
+
+
+<div class="signin-btns">
+    <div class="signin-btn">
+        <div
+            class="g-signin2"
+            data-scope="profile email"
+            data-onsuccess="signInCallback_google"
+            data-width="240"
+            data-height="50"
+            data-longtitle="true"
+            data-theme="dark"
+        ></div>
+    </div>
+    <div class="signin-btn">
+        <div
+            class="fb-login-button"
+            data-scope="public_profile,email"
+            data-onlogin="signInCallback_facebook"
+            data-max-rows="1"
+            data-size="large"
+            data-width="240px"
+            data-button-type="continue_with"
+        ></div>
+    </div>
+</div>
+
+
+<div id="signin-result"></div>
+
+{% endblock %}

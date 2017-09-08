@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+</head>
+<body>
+    <ul id="cat-list"></ul>
+    <div>
+        <h2 data-bind="text: catName"></h2>
+        <div data-bind="text: catLevel"></div>
+        <div data-bind="text: clickCount"></div>
+        <img alt="cute cat" data-bind="attr: {src: imgSrc}, click: incCount">
+        <ul data-bind="foreach: nickNames"><li data-bind="text: $data"></li></ul>
+    </div>
+    <script src="js/lib/knockout-3.4.2.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

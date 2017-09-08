@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="links-list-caption">Category: {{cat.name}}
+            {% if loggedIn(session) %}
+                <a href="{{url_for('newItem', cat_name=cat.name)}}" title="add new item in category: {{cat.name}}" class="new"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                {% if loggedIn(session) == cat.user_id %}
+                    <a href="{{url_for('editCat', cat_name=cat.name)}}" title="edit category: {{cat.name}}" class="new"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if loggedIn(session) == cat.user_id %}
+                    <a href="{{url_for('deleteCat', cat_name=cat.name)}}" title="delete category: {{cat.name}}" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                {% endif %}
+            {% endif %}
+            </div>
+            <div class="links-list">
+                {% for item in items %}
+                    <a href="{{url_for('showItem', cat_name=item.cat.name, item_name=item.name)}}">{{item.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,261 @@
+* {
+    font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+body {
+    background-color: #DDD;
+}
+.container {
+    background-color: #FFF;
+    min-height: 100vh;
+}
+.top-menu {
+}
+.top-menu div .title {
+    font-size: 3em;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.top-menu div a {
+    text-decoration: none;
+}
+.divider {
+    height: 15px;
+    margin-bottom: 10px;
+}
+.divider.blue {
+    background-color: #42C3C9;
+}
+.divider.green {
+    background-color: #9FB80A;
+}
+.flash {
+    padding: 0em;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+.flash li {
+    margin: 0.2em;
+    padding: 0.55em;
+    text-align: center;
+    list-style-type: none;
+    border-radius: 20px;
+    border: 1px solid #999;
+    background-color: rgba(152, 251, 152, 0.7);
+}
+.flash .error {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+.flash .success {
+    background-color: rgba(55, 224, 55, 0.3);
+}
+.flash .info, .flash .message {
+    background-color: rgba(55, 55, 204, 0.25);
+}
+.links-list-caption {
+    display: block;
+    font-size: 1.75em;
+    padding: 0.6em 1em;
+    border-radius: 0.75em;
+    background-color: rgb(245, 245, 220);
+}
+.links-list-caption a {
+    margin-right: 5px;
+}
+.links-list-caption a.new {
+    float: right;
+}
+.links-list-caption a.delete {
+    color: #8b0000;;
+}
+.links-list a {
+    display: block;
+    padding: 0.75em 1em;
+    font-size: 1em;
+    border-radius: 0.5em;
+}
+.links-list a:hover {
+    text-decoration: none;
+    background-color: rgb(250, 235, 215);
+}
+.signin-btns  {
+    text-align: center;
+}
+.signin-btns .signin-btn {
+    display: block;
+    margin: 0.5em auto;
+}
+.signin-btn div {
+    margin-left: auto;
+    margin-right: auto;
+}
+.login {
+    display: table;
+    height: 100%;
+    margin-left: auto;
+    text-align: center;
+    font-size: 0.8em;
+}
+.login div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.login div div {
+    display: inline-block;
+    cursor: default;
+    border-style: solid;
+    border-radius: 0.5em;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+    padding: 0.1em 0.25em;
+}
+.login div div img {
+    border-radius: 16px;
+}
+.login div a {
+    display: block;
+}
+
+/*
+
+h1 {
+    font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    color: #51453B;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 24px;
+    color: #42C3C9;
+    line-height: 29px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #4A4A4A;
+    line-height: 23px;
+}
+ p {
+     font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+     font-size: 16px;
+     color: #7B7573;
+     line-height: 24px;
+     font-weight: 400;
+}
+
+ strong {
+     font-size: 16px;
+     color: #7B7573;
+     line-height: 24px;
+}
+
+ a {
+     font-size: 14px;
+     color: #0093B9;
+     line-height: 17px;
+}
+.padding-top {
+    padding-top: 30px;
+}
+.padding-bottom {
+    padding-bottom: 30px;
+}
+.margin-right {
+    margin-right: 30px;
+}
+.padding-none {
+    padding: 0;
+}
+ .restaurant-list:hover {
+     background-color: #e1e17f;
+     padding: 20px;
+}
+.menu-item {
+    background: #F0F0F0;
+    padding: 20px;
+    margin: 20px;
+    margin-left: -20px;
+}
+.menu-price {
+    font-weight: 700;
+}
+.creator {
+    padding-right: 20px;
+    margin-top: -20px;
+    text-align: right;
+    float:right;
+}
+.creator img {
+    width: 100px;
+    border-radius: 50%;
+}
+.creator figcaption {
+    font-size: 14px;
+    color: #7B7573;
+    font-weight: 400;
+    margin-top: -20px;
+}
+
+######################################## NOT USED
+
+.restaurant-list {
+     background-color: #F0F0F0;
+     padding: 20px;
+}
+.banner.main {
+    height: 150px;
+    background: url("/static/top-banner.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner.menu {
+    height: 150px;
+    background-color: #E1E17F;
+}
+.banner.profile {
+    height: 150px;
+    background-color: #A6E8EB;
+}
+.banner h1 {
+    margin: 45px 0;
+}
+*/
+/*
+.btn {
+    padding: 20px;
+    margin: 0;
+    border-color: #9FB80A;
+    border-width: 2px;
+    color: #9FB80A;;
+}
+.btn:hover {
+    border-color: #9FB80A;
+}
+.btn.delete {
+    border-color: #aaaaaa;
+    color: #aaaaaa;
+}
+.btn.delete:hover {
+    border-color: #aaaaaa;
+    color: red;
+}
+.glyphicon {
+    margin-right: 10px;
+}
+.top-menu p {
+    margin-bottom: 0;
+    line-height: 16px;
+}
+.top-menu a {
+    margin-bottom: 0;
+    line-height: 16px;
+    font-size: 16px;
+    color: #7B7573;
+    font-weight: 400;
+}
+*/
