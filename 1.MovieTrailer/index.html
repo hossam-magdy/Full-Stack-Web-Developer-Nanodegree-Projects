@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>FSND Project: Movie Trailers</title>
     <!-- Bootstrap 4 alpha stylesheet -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <style>
     #trailer-video-container {
         text-align: center;
@@ -151,9 +151,9 @@
     </div>
 
     <!-- Load the JavaScript files: jQuery, Tether, Bootstrap4 -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 
     <!-- Inline Javascript code for page initialization (assign event handlers, & show movies one by one) -->
     <script type="text/javascript" charset="utf-8">
@@ -164,7 +164,7 @@
         // Start playing the video whenever the trailer modal is opened
         $('#trailer').on('show.bs.modal', function (e) {
             var trailerYouTubeId = $(e.relatedTarget).attr('data-trailer-youtube-id');
-            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            var sourceUrl = '//www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
             $("#trailer-video-container").empty().append($("<iframe></iframe>", {
                 'id': 'trailer-video',
                 'type': 'text-html',
