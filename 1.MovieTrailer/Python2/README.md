@@ -6,11 +6,11 @@
 
 From this array:
 
-![code](https://github.com/hossam-magdy/FSND-Project-Movie-Trailer-Python2/raw/master/example_Code.png "Array of movies")
+![code](https://github.com/hossam-magdy/fsnd-projects/raw/master/1.MovieTrailer/Python2/example_Code.png "Array of movies data")
 
 It generates the following web page:
 
-![screenshot](https://github.com/hossam-magdy/FSND-Project-Movie-Trailer-Python2/raw/master/example_FSND_Project_MovieTrailers.jpg "Screenshot of the generated web page")
+![screenshot](https://github.com/hossam-magdy/fsnd-projects/raw/master/1.MovieTrailer/Python2/example_FSND_Project_MovieTrailers.jpg "Screenshot of the generated web page")
 
 
 ## How to download & run this project
