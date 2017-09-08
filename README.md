@@ -36,3 +36,4 @@ The [nanodegree program](https://www.udacity.com/course/full-stack-web-developer
 - [Google Maps APIs - Emily Keller, Ajay Hemnani & Michael Wales](https://www.udacity.com/course/google-maps-apis--ud864)
 - [Configuring Linux Web Servers - Michael Wales](https://www.udacity.com/course/configuring-linux-web-servers--ud299)
 
+`~`: project is not fully included, or included in FSND version 3.0.0 not version 4.0.0
