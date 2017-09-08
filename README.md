@@ -1,5 +1,7 @@
 # [Udacity: Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004) Projects
-Created by [Google](www.google.com), [Amazon](https://www.amazon.com), [GitHub](https://github.com) and [AT&T](https://www.att.com/).
+Co-reated by Google, Amazon, GitHub and AT&T.
+
+[Webcast (about the nanodegree)](https://github.com/udacity/ipnd-webcasts/tree/master/Intro-To-Other-Nanodegrees/Full-Stack-Web-Developer)
 
 
 ### Courses:
@@ -7,7 +9,7 @@ Created by [Google](www.google.com), [Amazon](https://www.amazon.com), [GitHub](
 - [Responsive Web Design Fundamentals - Cameron Pittman](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)
 - [Intro to HTML and CSS - Cameron Pittman](https://www.udacity.com/course/intro-to-html-and-css--ud304)
 - [Responsive Images - Cameron Pittman & Sam Dutton](https://www.udacity.com/course/responsive-images--ud882)
-- [Shell Workshop - Karl Krueger] (https://www.udacity.com/course/shell-workshop--ud206)
+- [Shell Workshop - Karl Krueger](https://www.udacity.com/course/shell-workshop--ud206)
 - ~ [Linux Command Line Basics - Philip Mallory & Karl Krueger](https://www.udacity.com/course/linux-command-line-basics--ud595)
 - [Version Control with Git - Richard Kalehoff](https://www.udacity.com/course/version-control-with-git--ud123)
 - [GitHub & Collaboration - Richard Kalehoff](https://www.udacity.com/course/github-collaboration--ud456)
@@ -27,15 +29,9 @@ Created by [Google](www.google.com), [Amazon](https://www.amazon.com), [GitHub](
 
 
 ### Projects:
-1. Movie Trailer:
-Server-side code written in Python to store a list of my favorite movies, including box art imagery and a movie trailer URL. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.
-2. Build Portfolio Site:
-Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.
-3. Log Analysis:
-A  large database with over a million rows is explored by building complex SQL queries to draw business conclusions for the data. The project mimics building an internal reporting tool for a newpaper site to discover what kind of articles the site's readers like. The database contains newspaper articles, as well as the web server log for the site.
-4. Item Catalog:
-A RESTful web application utilizing the Flask framework which accesses a SQL database that populates categories and their items. OAuth2 provides authentication for further CRUD functionality on the application. OAuth2 is implemented for Google & facebook providers.
-5. Neighborhood Map:
-An interactive website put together from various APIs. This includes making function calls to Google Maps and other location-based services like Foursquare
-6. Linux Server Configuration:
-Installing & configuring all required software to turn a baseline Ubuntu AWS (Amazon Web Services) server into a fully functional web application server, including Apache Web Server and PostgreSQL database server.
+1. **Movie Trailer**: Server-side code written in Python to store a list of my favorite movies, including box art imagery and a movie trailer URL. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.
+2. **Build Portfolio Site**: Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.
+3. **Log Analysis**: A  large database with over a million rows is explored by building complex SQL queries to draw business conclusions for the data. The project mimics building an internal reporting tool for a newpaper site to discover what kind of articles the site's readers like. The database contains newspaper articles, as well as the web server log for the site.
+4. **Item Catalog**: A RESTful web application utilizing the Flask framework which accesses a SQL database that populates categories and their items. OAuth2 provides authentication for further CRUD functionality on the application. OAuth2 is implemented for Google & facebook providers.
+5. **Neighborhood Map**: An interactive website put together from various APIs. This includes making function calls to Google Maps and other location-based services like Foursquare
+6. **Linux Server Configuration**: Installing & configuring all required software to turn a baseline Ubuntu AWS (Amazon Web Services) server into a fully functional web application server, including Apache Web Server and PostgreSQL database server.
