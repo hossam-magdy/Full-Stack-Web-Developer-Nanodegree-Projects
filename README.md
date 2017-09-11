@@ -1,5 +1,5 @@
 # Full Stack Web Developer Nanodegree Projects
-The [nanodegree program](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004) is from Udacity & co-reated by Google, Amazon, GitHub and AT&T.
+The [nanodegree program](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004) is from Udacity & co-created by Google, Amazon, GitHub and AT&T.
 
 [Webcast (about the nanodegree)](https://github.com/udacity/ipnd-webcasts/tree/master/Intro-To-Other-Nanodegrees/Full-Stack-Web-Developer)
 
