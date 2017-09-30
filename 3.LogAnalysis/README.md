@@ -1,7 +1,7 @@
 # Full Stack Nanodegree Project: Log Analysis
 
 ## What is this project? What does it do?
-It is an *internal reporting tool* that prints out reports (in plain text) based on the data in the database of *newspaper site*. This reporting tool is a Python program using the psycopg2 module to connect to the database.
+An *internal reporting tool* that prints out reports (in plain text) based on the data in the database of *newspaper site*. This reporting tool is a Python program using the psycopg2 module to connect to the database.
 
 It is designed to answer 3 questions from database:
 1. What are the most popular three articles of all time?
